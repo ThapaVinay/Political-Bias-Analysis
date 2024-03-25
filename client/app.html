@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Political Bias Analysis</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="img"></div>
+    <form class="form">
+      <h2>Enter Text</h2>
+      <textarea
+        class="area"
+        type="text"
+        id="uiText"
+        name="text"
+      ></textarea>
+    </form>
+    <button class="submit" onclick="onClickedBias()" type="button">
+      Check Bias
+    </button>
+    <div id="uiBias" class="result"><h2></h2></div>
+  </body>
+</html>
