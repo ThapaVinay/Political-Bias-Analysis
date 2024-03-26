@@ -22,10 +22,11 @@ def preprocess(text):
 
 # vectorise
 def vectorize(text):
-    return text.vector
+    return nlp(text).vector.reshape(1, -1)
 
 # for finding the bias
 def get_bias(text):
+    print(text)
     clean_text = preprocess(text)
     embeddings = vectorize(clean_text)
     
@@ -35,9 +36,8 @@ def get_bias(text):
 def load_saved_model():
     global __model
     
-    with open("model.joblib", "rb") as f:
+    with open("../model/model.joblib", "rb") as f:
         __model = load(f)
-
 
 # main function
 if __name__ == "__main__":

@@ -13,6 +13,6 @@ def predict_bias():
     return response
 
 if __name__ == "__main__":
-    print("Starting python Flask server for Home price Prediction...")
-    util.load_saved_artifacts()
+    print("Starting python Flask server...")
+    util.load_saved_model()
     app.run()
