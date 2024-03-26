@@ -1,9 +1,9 @@
 function onClickedBias() {
-  var text = document.getElementById("uiText");
+  var text = document.getElementById("uiText").value;
   var bias = document.getElementById("uiBias");
 
   var url = "http://127.0.0.1:5000/predict_bias";
-
+  
   $.post(
     url,
     {
